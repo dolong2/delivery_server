@@ -1,0 +1,17 @@
+server:
+  port: 3001
+spring:
+  profiles:
+    include:
+      - seceret
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        #show_sql: true
+        format_sql: true
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
