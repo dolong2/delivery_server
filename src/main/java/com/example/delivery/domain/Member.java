@@ -1,7 +1,9 @@
 package com.example.delivery.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,9 +13,8 @@ import javax.persistence.Id;
 @Entity
 @Builder
 @Getter
+@AllArgsConstructor
 public class Member {
-    public Member() {
-    }
 
     @Id
     @Column(name="member_id")
@@ -27,4 +28,8 @@ public class Member {
     private String password;
 
     private int money;
+
+    public Member() {
+
+    }
 }
