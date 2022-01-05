@@ -5,10 +5,12 @@ import com.example.delivery.dto.MemberDto;
 import com.example.delivery.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
 @Service
+@Transactional
 @RequiredArgsConstructor
 public class MemberService {
     private final MemberRepository memberRepository;
@@ -21,5 +23,8 @@ public class MemberService {
         Optional<Member> byId = memberRepository.findById(id);
         Member member = byId.get();
         return member;
+    }
+    public void delete(){
+        memberRepository.deleteAll();
     }
 }
