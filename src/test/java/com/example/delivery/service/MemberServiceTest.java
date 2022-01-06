@@ -17,7 +17,7 @@ class MemberServiceTest {
 
     @AfterEach
     public void init(){
-        memberService.delete();
+        memberService.deleteAll();
     }
 
     @Test

@@ -24,7 +24,10 @@ public class MemberService {
         Member member = byId.get();
         return member;
     }
-    public void delete(){
+    public void deleteOne(Long memberIdx){
+        memberRepository.deleteById(memberIdx);
+    }
+    public void deleteAll(){
         memberRepository.deleteAll();
     }
 }
