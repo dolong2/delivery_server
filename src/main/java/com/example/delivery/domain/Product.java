@@ -14,6 +14,6 @@ public class Product {
     private int price;
 
     @OneToOne
-    @JoinColumn(name="member_id")
-    private Member owner;
+    @JoinColumn(name="store_id")
+    private Store store;
 }
